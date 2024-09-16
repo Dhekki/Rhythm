@@ -1,0 +1,25 @@
+.game-container {
+    width: 540px;
+    height: 960px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+.cell {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.cell:hover {
+    background-color: #ccc;
+}
