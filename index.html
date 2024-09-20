@@ -4,38 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo de Ritmo</title>
-    <style>
-        /* Estilo básico para centralizar o grid */
-        .game-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            width: 300px; /* Ajuste o tamanho conforme necessário */
-            height: 300px;
-            margin: 100px auto;
-            position: relative;
-            border: 2px solid #000;
-        }
-
-        .cell {
-            border: 1px solid #ccc;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .circle {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 50%;
-            background: radial-gradient(circle, #fff, #ccc);
-            transition: width 0.5s, height 0.5s;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <audio id="música" src="MJ_BillieJean.mp3" autoplay></audio>
+    <audio id="música" src="West - Euro$tep.mp3" autoplay></audio>
     <div class="game-container">
         <div class="cell"></div>
         <div class="cell"></div>
@@ -48,6 +20,6 @@
         <div class="cell"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
