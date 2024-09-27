@@ -213,17 +213,29 @@ function calculateClickPrecision(clickTime) {
     dispareScore(clickPrecision);
 }
 
+let score = 0;
 function dispareScore(clickPrecision) {
+    const feedbackElement = document.getElementById('click-feedback');
+    const scoreElement = document.getElementById('score');
+
     if (clickPrecision > 75) {
         console.log("Perfect");
+        feedbackElement.textContent = "Perfect";
+        score += 100;
     } else if (clickPrecision > 50) {
         console.log("Good");
+        feedbackElement.textContent = "Good";
+        score += 50;
     } else if (clickPrecision > 25) {
         console.log("Ok");
+        feedbackElement.textContent = "Ok";
+        score += 25;
     } else {
         console.log("Bad");
-        displayRandomImage();
+        feedbackElement.textContent = "Bad";
     }
+
+    scoreElement.textContent = `Score: ${score}`;
 }
 
 // Toca a música selecionada
