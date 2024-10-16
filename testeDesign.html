@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Beat</title>
+    <style>
+        body {
+            background-color: #3A196A;
+            font-family: 'Kodchasan', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #64F222;
+            overflow: hidden; /* Impede rolagem indesejada */
+        }
+
+        .container {
+            text-align: center;
+            position: relative;
+            width: 90%; /* Largura máxima para a container */
+            max-width: 450px; /* Largura máxima para desktop */
+            padding-bottom: 20px; /* Espaçamento inferior */
+        }
+
+        h1 {
+            font-size: 74px;
+            margin-bottom: 30px;
+            text-shadow: 4px 4px rgba(4, 157, 191, 0.31);
+        }
+
+        .score, .status {
+            font-size: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-shadow: 4px 4px rgba(4, 157, 191, 0.31);
+        }
+
+        .grid {
+            width: 100%;
+            aspect-ratio: 1; /* Mantém a proporção 1:1 para a grid */
+            max-height: 450px; /* Altura máxima para a grid */
+            background-color: #049DBF;
+            border-radius: 8px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Usar 1fr para largura proporcional */
+            gap: 0;
+        }
+
+        .grid div {
+            background-color: transparent;
+            border: 1px solid #211259;
+            position: relative;
+            outline: 1px solid #211259;
+            box-sizing: border-box; /* Inclui a borda na largura e altura */
+        }
+
+        /* Cantos arredondados */
+        .grid div:nth-child(1) {
+            border-top-left-radius: 8px;
+        }
+        .grid div:nth-child(3) {
+            border-top-right-radius: 8px;
+        }
+        .grid div:nth-child(7) {
+            border-bottom-left-radius: 8px;
+        }
+        .grid div:nth-child(9) {
+            border-bottom-right-radius: 8px;
+        }
+
+        .background-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .background-shapes img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Media Queries para Responsividade */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 50px; /* Tamanho do título menor em telas pequenas */
+            }
+
+            .score, .status {
+                font-size: 30px; /* Tamanho da pontuação e status menor */
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 36px; /* Tamanho do título ainda menor */
+            }
+
+            .score, .status {
+                font-size: 24px; /* Tamanho da pontuação e status ainda menor */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tic Tac Beat</h1>
+        <div class="grid">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="status">PERFEITO!</div>
+        <div class="score">PONTUAÇÃO: 0</div>
+    </div>
+    <div class="background-shapes">
+        <img src="background.png" alt="Background">
+    </div>
+</body>
+</html>
+
