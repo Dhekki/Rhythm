@@ -23,7 +23,7 @@ window.addEventListener('load', () => {
     .then(response => response.json())
     .then(data => {
         songs = data;
-        playSelectedSong(2); // Chama a música depois de carregar
+        playSelectedSong(0); // Chama a música depois de carregar
     })
     .catch(error => console.error('Erro ao carregar o arquivo JSON:', error));
 });
